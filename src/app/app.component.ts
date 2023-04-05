@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Stocks-App';
+  searchStock: string = "";
+
+  sendStock(){
+    console.log(this.searchStock)
+  }
 }

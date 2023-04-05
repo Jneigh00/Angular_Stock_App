@@ -16,8 +16,9 @@
   <h1 class = "blue-text">Welcome to STONKS X!</h1>
   <img src="https://i.insider.com/601448566dfbe10018e00c5d?width=700">
   <div class="searchStockDiv">
-     <i id = "search" class = "material-icons" style = "margin-top: 30px;">search</i>
-      <input class = "blue-text" type = "text"  id = "enteredStock" style = "width: 300px; height: 50px;" placeholder="Enter a stock to search">
+     <i (click)="sendStock()" id = "search" class = "material-icons" style = "margin-top: 30px;">search</i>
+     <input  [(ngModel)]="searchStock" class = "blue-text" type = "text"  id = "enteredStock" style = "width: 300px; height: 50px;" placeholder="Enter a stock to search">
+     <app-display-stock [searchStock]="searchStock"> </app-display-stock>
   </div>
 </div>
 
